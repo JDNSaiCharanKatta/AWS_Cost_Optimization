@@ -12,7 +12,7 @@
 <p> In the world of managing cloud infrastructure, even small mistakes can lead to unnecessary expenses. Picture a scenario where an Elastic IP is connected to an EC2 instance but forgotten after termination. In such instances, the inactive Elastic IP quietly accumulates costs, underscoring the vital importance of meticulous resource management to reduce expenses.</p>
 
 ## Steps:
-### Step1:
+### Step 1:
 
 1. Log into your AWS Console, then proceed to navigate to the EC2 Console. Once there, in the Instances section, select 'Instances,' and subsequently click on 'Launch Instance
 
@@ -28,7 +28,7 @@
 
 ![snapshot created](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/c278494c-fdec-405b-b56f-7a401b30ccb0)
 
-## Step2:
+## Step 2:
 ### Steps:
 1. After creating a snapshot, navigate to the Lambda Console. In the user interface, you will see options such as 'Create Function'. Click on 'Functions'. Select 'Author from Scratch,' then enter the Function name, and choose the latest Python version. Scroll down and click 'Create Function'.
 
@@ -49,25 +49,30 @@
 In the 'Actions' section, grant permissions for the following actions: DescribeInstances, DescribeVolumes, DescribeSnapshots, DeleteSnapshots.
 
 6. After Creating the Policies , Navigate to the Lambda Sections.
-![Creating policies](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/1af09ff7-29ff-412d-9b6b-a455db6fa024)
-
-7. Next, navigate to the page of the Lambda function you've created. In the "Permissions" section, click on the role name. Click on 'Add Permissions' and then select 'Attach Policy'. Choose the correct policy you created. Then, scroll down and click 'Add Permissions
-![adding role permission](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/dbc5b2b3-3ea6-45be-90d6-c6b5a7159e08)
-
-8. After that, you can go to the Lambda function page and run the code; it will display some outputs as shown below.
-![Final output](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/cac5ff80-6d72-4fa9-8c80-ba5f68d3efdd)
+![Creating policies](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/c24608a6-caa4-4ec9-a54d-5934771cc0c5)
 
 
-## Step3:
-### Steps
+8. Next, navigate to the page of the Lambda function you've created. In the "Permissions" section, click on the role name. Click on 'Add Permissions' and then select 'Attach Policy'. Choose the correct policy you created. Then, scroll down and click 'Add Permissions
+![adding role permission](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/858a84c3-ede9-400d-a661-a50a43020ff5)
+
+
+9. After that, you can go to the Lambda function page and run the code; it will display some outputs as shown below.
+![Final output](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/bc3ccfcb-ab90-4c4f-9458-872b28a6f6bf)
+
+
+
+## Step 3:
+  Steps:
 1. You can terminate the Ec2 instance to test our Lambda function.
 2. Navigate to the Ec2 console and then terminate the Ec2 Instance.
 3. return to the lambda console to test the code; go the lambda function page.
 4. Under the code section, click 'Test code', it will display an output like this.
+
    
 ## CloudWatch or EventBridge Implementation
 
-###steps:
+
+ steps:
 1. Navigate to CloudWatch Console.
 ![cloudwatch creation](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/cd6830dc-0fa9-4962-93ad-26b0bab545d4)
 2. Next, on the following page, configure the schedule pattren as follows:
