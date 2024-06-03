@@ -18,6 +18,7 @@
 2. Navigate to the EC2 Console.<br>
 3. In the Instances section, select 'Instances,' and then click on 'Launch Instance'.<br>
 
-  
+![EC2-creation](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/23e61820-9926-4e6e-97ea-113e691a1933)
+
 
 
