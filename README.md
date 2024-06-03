@@ -27,3 +27,20 @@
 12. After clicking "Next", you should provide a name for your snapshot. Then, scroll down and click "Create Snapshot". Navigate to the Snapshot option in the EC2 Dashboard and verify whether the snapshot was successfully created or not.
 
 ![snapshot created](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/c278494c-fdec-405b-b56f-7a401b30ccb0)
+
+## Step2:
+### Steps:
+1. After creating a snapshot, navigate to the Lambda Console. In the user interface, you will see options such as 'Create Function'. Click on 'Functions'.
+
+2. Select 'Author from Scratch,' then enter the Function name, and choose the latest Python version. Scroll down and click 'Create Function'. After creating the function, scroll down, and you will see something similar to the image below.
+
+3. 
+
+   
+
+
+
+
+
+
+
