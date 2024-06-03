@@ -67,7 +67,7 @@ In the 'Actions' section, grant permissions for the following actions: DescribeI
 2. Navigate to the Ec2 console and then terminate the Ec2 Instance.
 3. return to the lambda console to test the code; go the lambda function page.
 4. Under the code section, click 'Test code', it will display an output like this.
-   
+   ![result3](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/b94bba03-99fc-46e5-8f3d-3ffba5f12a2e)
 
    
 ## CloudWatch or EventBridge Implementation
