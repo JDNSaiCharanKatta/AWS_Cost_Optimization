@@ -20,5 +20,11 @@
 
 ![EC2-creation](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/23e61820-9926-4e6e-97ea-113e691a1933)
 
+4. Next, navigate to the 'Elastic Block Store' section and select "Volumes"
 
+   
+6. You Will notice that a default volume has already been created for us.
+7. Next, click on 'Snapshots' and then click on "Create Snapshot" button. It will Prompt you with a page that looks like this.
+8. In Volume ID section choose your default Volume ID created when we create instance.
+9. Nexxt, click 'next' provide a name for your snapshot, and then scroll down and click "Create Snapshot".
 
