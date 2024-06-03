@@ -1,4 +1,4 @@
-![266176228-dcca1fe9-faaf-4927-b50b-8d230ecfc7a2](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/f0b2998d-9f38-4885-ab61-9d9ef8f2004f)## Efficient AWS Cost Management through Stale Resource Detection
+## Efficient AWS Cost Management through Stale Resource Detection
 
 ## Problem: 
 
