@@ -18,26 +18,47 @@
 
 ![EC2-creation](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/23e61820-9926-4e6e-97ea-113e691a1933)
 
-4. Next, navigate to the 'Elastic Block Store' section and select "Volumes". You will notice that a default volume has already been created for you. 
+2. Next, navigate to the 'Elastic Block Store' section and select "Volumes". You will notice that a default volume has already been created for you. 
  ![volume](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/a68d91f2-b810-4d44-b478-3edc06d9a841)
  
-6. Then, click on 'Snapshots' and proceed to click on the "Create Snapshot" button. This action will prompt you with a page resembling the one shown. Lastly, in the Volume ID section, select the default Volume ID that was created when the instance was created.
-11. ![Snapshot](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/35a82796-5ae5-4c01-a2a0-264e19116059)
+3. Then, click on 'Snapshots' and proceed to click on the "Create Snapshot" button. This action will prompt you with a page resembling the one shown. Lastly, in the Volume ID section, select the default Volume ID that was created when the instance was created.
+ ![Snapshot](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/35a82796-5ae5-4c01-a2a0-264e19116059)
    
-12. After clicking "Next", you should provide a name for your snapshot. Then, scroll down and click "Create Snapshot". Navigate to the Snapshot option in the EC2 Dashboard and verify whether the snapshot was successfully created or not.
+5. After clicking "Next", you should provide a name for your snapshot. Then, scroll down and click "Create Snapshot". Navigate to the Snapshot option in the EC2 Dashboard and verify whether the snapshot was successfully created or not.
 
 ![snapshot created](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/c278494c-fdec-405b-b56f-7a401b30ccb0)
 
 ## Step2:
 ### Steps:
-1. After creating a snapshot, navigate to the Lambda Console. In the user interface, you will see options such as 'Create Function'. Click on 'Functions'.
+1. After creating a snapshot, navigate to the Lambda Console. In the user interface, you will see options such as 'Create Function'. Click on 'Functions'. Select 'Author from Scratch,' then enter the Function name, and choose the latest Python version. Scroll down and click 'Create Function'.
 
 ![lambda function created](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/23a32fc4-3792-438f-bc79-d5e0b23f2bbe)
 
 
-3. Select 'Author from Scratch,' then enter the Function name, and choose the latest Python version. Scroll down and click 'Create Function'. After creating the function, scroll down, and you will see something similar to the image below.
+3.  After creating the function, scroll down, and you will see something similar to the image below. Click on the 'Code' section. Next, clear the existing code and replace it with the "ebs_stale_snapshots.py".
 
-4. ![code](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/0deca2e9-4157-41bd-a5da-0d9c47465b04)
+4.  ![code](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/0deca2e9-4157-41bd-a5da-0d9c47465b04)
+5.  Click 'Deploy' to save your changes, and then click 'Test'. This action will prompt a page that resembles the one shown below. 
+   
+![99](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/9c154b62-c375-4b30-8fc8-5dc4fb0a217d)
+
+Please configure the settings as displayed above and then scroll down. Next, click on 'Create Event'.Once you've created the event, proceed to the IAM Console(Identity and Access Management) and then navigate policies section to create a new policy.
+
+Select the service as 'EC2'
+In the 'Actions' section, grant permissions for the following actions: DescribeInstances, DescribeVolumes, DescribeSnapshots, DeleteSnapshots.
+
+
+
+After Creating the Policies , Navigate to the Lambda Sections.
+
+Next, go to the page of the Lambda function you've created. In the "Permissions" section, click on the role name.
+
+
+Click on 'Add Permissions' and then select 'Attach Policy.'
+Choose the correct policy you created.
+
+Then scroll down and click 'Add Permissions'.
+After that, you can go to the Lambda function page and run the code; it will display some outputs as shown below.
 
    
 
