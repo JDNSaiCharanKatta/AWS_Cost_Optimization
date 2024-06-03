@@ -14,17 +14,16 @@
 ## Steps:
 ### Step1:
 
-1. Log into your AWS Console.<br>
-2. Navigate to the EC2 Console.<br>
-3. In the Instances section, select 'Instances,' and then click on 'Launch Instance'.<br>
+1. Log into your AWS Console, then proceed to navigate to the EC2 Console. Once there, in the Instances section, select 'Instances,' and subsequently click on 'Launch Instance
 
 ![EC2-creation](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/23e61820-9926-4e6e-97ea-113e691a1933)
 
-4. Next, navigate to the 'Elastic Block Store' section and select "Volumes"
-
+4. Next, navigate to the 'Elastic Block Store' section and select "Volumes". You will notice that a default volume has already been created for you. 
+ ![volume](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/a68d91f2-b810-4d44-b478-3edc06d9a841)
+ 
+6. Then, click on 'Snapshots' and proceed to click on the "Create Snapshot" button. This action will prompt you with a page resembling the one shown. Lastly, in the Volume ID section, select the default Volume ID that was created when the instance was created.
+11. ![Snapshot](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/35a82796-5ae5-4c01-a2a0-264e19116059)
    
-6. You Will notice that a default volume has already been created for us.
-7. Next, click on 'Snapshots' and then click on "Create Snapshot" button. It will Prompt you with a page that looks like this.
-8. In Volume ID section choose your default Volume ID created when we create instance.
-9. Nexxt, click 'next' provide a name for your snapshot, and then scroll down and click "Create Snapshot".
+12. After clicking "Next", you should provide a name for your snapshot. Then, scroll down and click "Create Snapshot". Navigate to the Snapshot option in the EC2 Dashboard and verify whether the snapshot was successfully created or not.
 
+![snapshot created](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/c278494c-fdec-405b-b56f-7a401b30ccb0)
