@@ -37,24 +37,24 @@
 
 2.  After creating the function, scroll down, and you will see something similar to the image below. Click on the 'Code' section. Next, clear the existing code and replace it with the "ebs_stale_snapshots.py".
 
-3.  ![code](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/0deca2e9-4157-41bd-a5da-0d9c47465b04)
-4.  Click 'Deploy' to save your changes, and then click 'Test'. This action will prompt a page that resembles the one shown below. 
+    ![code](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/0deca2e9-4157-41bd-a5da-0d9c47465b04)
+3.  Click 'Deploy' to save your changes, and then click 'Test'. This action will prompt a page that resembles the one shown below. 
    ![Test](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/4d56b336-9c4a-4450-bdba-7c9e9d714560)
 
 
-5. Please configure the settings as displayed above and then scroll down. Next, click on 'Create Event'.Once you've created the event, proceed to the IAM Console(Identity and Access Management) and then navigate policies section to create a new policy.
+4. Please configure the settings as displayed above and then scroll down. Next, click on 'Create Event'.Once you've created the event, proceed to the IAM Console(Identity and Access Management) and then navigate policies section to create a new policy.
 ![configuration](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/b79fb401-9ed6-4ea3-93c8-6ada5ff09e1c)
 
-6. Select the service as 'EC2'
+5. Select the service as 'EC2'
 In the 'Actions' section, grant permissions for the following actions: DescribeInstances, DescribeVolumes, DescribeSnapshots, DeleteSnapshots.
 
-7. After Creating the Policies , Navigate to the Lambda Sections.
+6. After Creating the Policies , Navigate to the Lambda Sections.
 ![Creating policies](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/1af09ff7-29ff-412d-9b6b-a455db6fa024)
 
-8. Next, navigate to the page of the Lambda function you've created. In the "Permissions" section, click on the role name. Click on 'Add Permissions' and then select 'Attach Policy'. Choose the correct policy you created. Then, scroll down and click 'Add Permissions
+7. Next, navigate to the page of the Lambda function you've created. In the "Permissions" section, click on the role name. Click on 'Add Permissions' and then select 'Attach Policy'. Choose the correct policy you created. Then, scroll down and click 'Add Permissions
 ![adding role permission](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/dbc5b2b3-3ea6-45be-90d6-c6b5a7159e08)
 
-9. After that, you can go to the Lambda function page and run the code; it will display some outputs as shown below.
+8. After that, you can go to the Lambda function page and run the code; it will display some outputs as shown below.
 ![Final output](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/cac5ff80-6d72-4fa9-8c80-ba5f68d3efdd)
 
 
