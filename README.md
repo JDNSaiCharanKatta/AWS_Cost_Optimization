@@ -1,4 +1,4 @@
-## Efficient AWS Cost Management through Stale Resource Detection
+![266176228-dcca1fe9-faaf-4927-b50b-8d230ecfc7a2](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/f0b2998d-9f38-4885-ab61-9d9ef8f2004f)## Efficient AWS Cost Management through Stale Resource Detection
 
 ## Problem: 
 
@@ -64,6 +64,27 @@ In the 'Actions' section, grant permissions for the following actions: DescribeI
 2. Navigate to the Ec2 console and then terminate the Ec2 Instance.
 3. return to the lambda console to test the code; go the lambda function page.
 4. Under the code section, click 'Test code', it will display an output like this.
+   
+## CloudWatch or EventBridge Implementation
+
+###steps:
+1. Navigate to CloudWatch Console.
+![cloudwatch creation](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/cd6830dc-0fa9-4962-93ad-26b0bab545d4)
+2. Next, on the following page, configure the schedule pattren as follows:
+![schedle pattren](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/8401f933-db5c-4406-8ddf-b845ebb390df)
+3. Scroll Down and then click next
+![Target detail](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/e0dbca5b-6925-493a-8a1c-6ce47458da93)
+
+4. Scroll Down and then click next.
+5. on the next page, choose 'None / Delete' for the 'Action after schedule' option.
+![schedule state](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/1ce9254b-8efc-46a9-a506-95140425094b)
+
+You have successfully created the scheduler, which will trigger the Lambda function for 5 minutes.
+However, please note that this setup will incur some costs since the function is triggered continuously every hour. Alternatively, we can configure it to run on specific days and times as needed.
+
+![permissions](https://github.com/JDNSaiCharanKatta/aws_cost_optimization/assets/170161500/b1586710-f1de-46a2-9b3d-63f59bf4fe95)
+6. Then click on next, and click review and create schedule.
+
    
 
 
